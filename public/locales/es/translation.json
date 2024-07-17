@@ -11,5 +11,26 @@
       "Spanish": "Espa~ol"
     },
     "SelectLanguage": "Idioma"
+  },
+  "Users": {
+    "Table": {
+      "Headers": {
+        "ID": "ID",
+        "Username": "Nombre de usuario",
+        "Status": "Estatus",
+        "DisplayName": "Nombre de visualización",
+        "FirstName": "Nombre(s)",
+        "LastName": "Apellido",
+        "Email": "Email",
+        "CreatedAt": "Creado en",
+        "Actions": "Actiones"
+      }
+    },
+    "Actions": {
+      "CreateUser": "Nuevo Usuario",
+      "ReadUser": "Ver",
+      "EditUser": "Editar",
+      "DeleteUser": "Borrar"
+    }
   }
 }

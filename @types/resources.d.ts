@@ -31,7 +31,8 @@ interface Resources {
         "CreateUser": "New User",
         "ReadUser": "View",
         "EditUser": "Edit",
-        "DeleteUser": "Delete"
+        "DeleteUser": "Delete",
+        "DeleteUserBulk": "Delete Users"
       }
     },
     "News": {
