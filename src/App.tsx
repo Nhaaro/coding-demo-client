@@ -9,6 +9,8 @@ import {
 import { Outlet } from 'react-router-dom'
 import NavBar from './components/NavBar'
 
+import './i18n.ts'
+
 function App() {
   const theme = createTheme({
     palette: {

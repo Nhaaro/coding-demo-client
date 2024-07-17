@@ -1,0 +1,15 @@
+{
+  "Navigation": {
+    "Tabs": {
+      "Users": "Usuarios",
+      "News": "Noticias"
+    }
+  },
+  "i18n": {
+    "Languages": {
+      "English": "Ingles",
+      "Spanish": "Espa~ol"
+    },
+    "SelectLanguage": "Idioma"
+  }
+}
