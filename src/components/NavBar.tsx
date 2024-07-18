@@ -73,13 +73,14 @@ const NavBar = () => {
             noWrap
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'BlogScript',
-              fontWeight: 700,
+              display: { xs: 'none', md: 'inline' },
               textDecoration: 'none',
-              lineHeight: '190%', // prevent letters being cropped
+              mb: '-0.9rem',
             }}
             color="primary"
+            fontFamily="BlogScript"
+            fontWeight={700}
+            lineHeight={2}
           >
             CODING DEMO
           </Typography>
@@ -131,14 +132,15 @@ const NavBar = () => {
             noWrap
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none' },
+              display: { xs: 'inline', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'BlogScript',
-              fontWeight: 700,
               textDecoration: 'none',
-              lineHeight: '190%', // prevent letters being cropped
+              mb: '-1rem',
             }}
             color="primary"
+            fontFamily="BlogScript"
+            fontWeight={700}
+            lineHeight={2}
           >
             DEMO
           </Typography>
