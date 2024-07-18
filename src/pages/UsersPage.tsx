@@ -122,11 +122,11 @@ const UsersPage = () => {
           <Typography
             variant="h6"
             sx={{
-              fontFamily: '"Playwrite AT", cursive',
+              fontFamily: 'BlogScript',
               fontWeight: 700,
-              color: '#a01208',
               lineHeight: '2rem', // prevent letters being cropped
             }}
+            color="secondary"
           >
             {t('Navigation.Tabs.Users')}
           </Typography>

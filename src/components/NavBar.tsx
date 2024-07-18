@@ -68,12 +68,12 @@ const NavBar = () => {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: '"Playwrite AT", cursive',
+              fontFamily: 'BlogScript',
               fontWeight: 700,
-              color: '#4a773c',
               textDecoration: 'none',
               lineHeight: '190%', // prevent letters being cropped
             }}
+            color="primary"
           >
             CODING DEMO
           </Typography>
@@ -127,12 +127,12 @@ const NavBar = () => {
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: '"Playwrite AT", cursive',
+              fontFamily: 'BlogScript',
               fontWeight: 700,
-              color: '#4a773c',
               textDecoration: 'none',
               lineHeight: '190%', // prevent letters being cropped
             }}
+            color="primary"
           >
             DEMO
           </Typography>
