@@ -19,12 +19,15 @@ import {
   GridRowSelectionModel,
   GridRowsProp,
 } from '@mui/x-data-grid'
-import React from 'react'
+import React, { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import { UserContext } from './UserContext'
 
 const UsersPage = () => {
   const { t } = useTranslation()
+
+  const users = useContext(UserContext)
 
   const columns: GridColDef[] = [
     { field: 'id', headerName: t('Users.Table.Headers.ID') },
@@ -91,26 +94,7 @@ const UsersPage = () => {
       ],
     },
   ]
-  const rows: GridRowsProp = [
-    {
-      id: 1,
-      username: 'username',
-      active: true,
-      firstName: 'User',
-      lastName: 'Name',
-      email: 'mail@mail.com',
-      createdAt: new Date(Date.now()),
-    },
-    {
-      id: 12,
-      username: 'username',
-      active: true,
-      firstName: 'User',
-      lastName: 'Name',
-      email: 'mail@mail.com',
-      createdAt: new Date(Date.now()),
-    },
-  ]
+  const rows: GridRowsProp = users?.users || []
 
   const [rowSelectionModel, setRowsSelectectionModel] =
     React.useState<GridRowSelectionModel>([])
@@ -125,6 +109,7 @@ const UsersPage = () => {
               fontFamily: 'BlogScript',
               fontWeight: 700,
               lineHeight: '2rem', // prevent letters being cropped
+              mb: '-0.3rem', // align with breadcrumbs
             }}
             color="secondary"
           >

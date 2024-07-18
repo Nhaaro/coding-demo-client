@@ -33,18 +33,17 @@ interface Resources {
         "EditUser": "Edit",
         "DeleteUser": "Delete",
         "DeleteUserBulk": "Delete Users"
-      }
-    },
-    "News": {
-      "Table": {
-        "Headers": {
-          "ID": "ID",
-          "Title": "Title",
-          "Actions": "Actions"
-        }
       },
-      "Actions": {
-        "ReadNew": "Read"
+      "Details": {
+        "AccountDetails": "Account Details",
+        "ID": "ID: ",
+        "Username": "Username: ",
+        "Status": "Status: ",
+        "Email": "Email: ",
+        "CreatedAt": "Created at: ",
+        "PersonalDetails": "Personal Details",
+        "FirstName": "First name: ",
+        "LastName": "Last name: "
       }
     }
   }

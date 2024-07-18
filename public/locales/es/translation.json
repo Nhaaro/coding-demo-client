@@ -31,6 +31,17 @@
       "ReadUser": "Ver",
       "EditUser": "Editar",
       "DeleteUser": "Borrar"
+    },
+    "Details": {
+      "AccountDetails": "Detalles de Cuenta",
+      "ID": "ID: ",
+      "Username": "Nombre de Usuario: ",
+      "Status": "Estatus: ",
+      "Email": "Email: ",
+      "CreatedAt": "Fecha de Creacion: ",
+      "PersonalDetails": "Detalles Personales",
+      "FirstName": "Nombre(s): ",
+      "LastName": "Apellido: "
     }
   }
 }
