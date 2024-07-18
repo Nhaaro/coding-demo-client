@@ -59,7 +59,13 @@ const NavBar = () => {
   }
 
   return (
-    <AppBar position="fixed" color="transparent">
+    <AppBar
+      position="fixed"
+      color="transparent"
+      sx={{
+        backdropFilter: 'blur(10px)',
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
