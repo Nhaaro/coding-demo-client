@@ -10,6 +10,7 @@ import '@fontsource/roboto/700.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import UsersPage from './pages/UsersPage.tsx'
+import NewsPage from './pages/NewsPage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'news',
-        element: <div>news</div>,
+        element: <NewsPage />,
         children: [
           {
             path: ':new',
