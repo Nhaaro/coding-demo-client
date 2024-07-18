@@ -9,9 +9,9 @@ import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import NewsPage from './pages/NewsPage.tsx'
 import UsersPage from './users/UsersPage.tsx'
 import UserDetails from './users/UserDetails.tsx'
+import NewsPage from './news/NewsPage.tsx'
 import UserProvider from './users/UserContext.tsx'
 
 const router = createBrowserRouter([
