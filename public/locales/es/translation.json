@@ -3,6 +3,10 @@
     "Tabs": {
       "Users": "Usuarios",
       "News": "Noticias"
+    },
+    "Actions": {
+      "CreateUser": "Crear Usuario",
+      "UpdateUser": "Editar detalles de usuario"
     }
   },
   "i18n": {
@@ -29,7 +33,9 @@
       "ReadUser": "Ver",
       "UpdateUser": "Editar",
       "DeleteUser": "Borrar",
-      "DeleteUserBulk": "Borrar usuarios"
+      "DeleteUserBulk": "Borrar usuarios",
+      "SaveUser": "Guardar",
+      "Cancel": "Cancelar"
     },
     "Details": {
       "AccountDetails": "Detalles de Cuenta",

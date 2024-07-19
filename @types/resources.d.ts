@@ -4,6 +4,10 @@ interface Resources {
       "Tabs": {
         "Users": "Users",
         "News": "News"
+      },
+      "Actions": {
+        "CreateUser": "Create User",
+        "UpdateUser": "Edit user details"
       }
     },
     "i18n": {
@@ -30,7 +34,9 @@ interface Resources {
         "ReadUser": "View",
         "UpdateUser": "Edit",
         "DeleteUser": "Delete",
-        "DeleteUserBulk": "Delete Users"
+        "DeleteUserBulk": "Delete Users",
+        "SaveUser": "Save",
+        "Cancel": "Cancel"
       },
       "Details": {
         "AccountDetails": "Account Details",

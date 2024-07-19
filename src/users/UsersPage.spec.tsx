@@ -1,4 +1,3 @@
-import { expect, test } from '@jest/globals'
 import { getByRole, render, screen } from '@testing-library/react'
 import {
   createMemoryRouter,
@@ -77,6 +76,52 @@ describe('UsersPage', () => {
   })
 
   describe('navigation', () => {
+    test('Create User button navigates correctly', async () => {
+      let router = createMemoryRouter(
+        [
+          {
+            path: 'users',
+            element: <UsersPage />,
+          },
+          {
+            path: 'users/create',
+            element: <UserForm />,
+          },
+          {
+            path: 'users/:userId',
+            element: <UserDetails />,
+          },
+          {
+            path: 'users/:userId/edit',
+            element: <UserForm />,
+          },
+        ],
+        {
+          initialEntries: ['/users'],
+        }
+      )
+
+      render(
+        <UserProvider>
+          <RouterProvider router={router} />
+        </UserProvider>
+      )
+
+      const createUserButton = screen.getByRole('link', {
+        name: /Users.Actions.CreateUser/i,
+      })
+      expect(createUserButton).toBeInTheDocument()
+      expect(
+        screen.queryByRole('button', { name: /Users.Actions.SaveUser/i })
+      ).not.toBeInTheDocument()
+
+      await userEvent.click(createUserButton)
+
+      expect(
+        screen.getByRole('button', { name: /Users.Actions.SaveUser/i })
+      ).toBeInTheDocument()
+    })
+
     test('Username link navigates correctly', async () => {
       let router = createMemoryRouter(
         [
@@ -119,6 +164,53 @@ describe('UsersPage', () => {
 
       expect(
         screen.getByRole('button', { name: /Users.Actions.UpdateUser/i })
+      ).toBeInTheDocument()
+    })
+
+    test('Edit User button navigates correctly', async () => {
+      let router = createMemoryRouter(
+        [
+          {
+            path: 'users',
+            element: <UsersPage />,
+          },
+          {
+            path: 'users/create',
+            element: <UserForm />,
+          },
+          {
+            path: 'users/:userId',
+            element: <UserDetails />,
+          },
+          {
+            path: 'users/:userId/edit',
+            element: <UserForm />,
+          },
+        ],
+        {
+          initialEntries: ['/users'],
+        }
+      )
+
+      render(
+        <UserProvider>
+          <RouterProvider router={router} />
+        </UserProvider>
+      )
+
+      const [firstRow] = screen.getAllByRole('row', { name: /Select row/i })
+      const updateUserButton = getByRole(firstRow, 'menuitem', {
+        name: /Users.Actions.UpdateUser/i,
+      })
+      expect(updateUserButton).toBeInTheDocument()
+      expect(
+        screen.queryByRole('button', { name: /Users.Actions.SaveUser/i })
+      ).not.toBeInTheDocument()
+
+      await userEvent.click(updateUserButton)
+
+      expect(
+        screen.getByRole('button', { name: /Users.Actions.SaveUser/i })
       ).toBeInTheDocument()
     })
   })

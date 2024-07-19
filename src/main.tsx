@@ -13,6 +13,7 @@ import UsersPage from './users/UsersPage.tsx'
 import UserDetails from './users/UserDetails.tsx'
 import NewsPage from './news/NewsPage.tsx'
 import UserProvider from './users/UserContext.tsx'
+import UserForm from './users/UserForm.tsx'
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'users/create',
-        element: <div>create user</div>,
+        element: <UserForm />,
       },
       {
         path: 'users/:userId',
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'users/:userId/edit',
-        element: <div>edit</div>,
+        element: <UserForm />,
       },
       {
         path: 'news',
