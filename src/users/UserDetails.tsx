@@ -58,6 +58,7 @@ const UserDetails = () => {
             variant="outlined"
             component={RouterLink}
             to={`/users/${userId}/edit`}
+            role="button"
           >
             {t('Users.Actions.UpdateUser')}
           </Button>

@@ -1,0 +1,424 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersPage presentation table starts with correct data 1`] = `
+[
+  <div
+    aria-rowindex="2"
+    aria-selected="false"
+    class="MuiDataGrid-row MuiDataGrid-row--firstVisible"
+    data-id="1"
+    data-rowindex="0"
+    role="row"
+    style="max-height: 52px; min-height: 52px; --height: 52px;"
+  >
+    <div
+      class="MuiDataGrid-cellOffsetLeft"
+      role="presentation"
+      style="width: 0px;"
+    />
+    <div
+      aria-colindex="1"
+      aria-colspan="1"
+      class="MuiDataGrid-cellCheckbox MuiDataGrid-cell--flex MuiDataGrid-cell MuiDataGrid-cell--textCenter"
+      data-colindex="0"
+      data-field="__check__"
+      role="gridcell"
+      style="--width: 50px;"
+      tabindex="-1"
+    >
+      <span
+        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiDataGrid-checkboxInput css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+      >
+        <input
+          aria-label="Select row"
+          class="PrivateSwitchBase-input css-1m9pwf3"
+          data-indeterminate="false"
+          tabindex="-1"
+          type="checkbox"
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="CheckBoxOutlineBlankIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </span>
+    </div>
+    <div
+      aria-colindex="2"
+      aria-colspan="1"
+      class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
+      data-colindex="1"
+      data-field="id"
+      role="gridcell"
+      style="--width: 100px;"
+      tabindex="-1"
+      title="1"
+    >
+      1
+    </div>
+    <div
+      aria-colindex="3"
+      aria-colspan="1"
+      class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
+      data-colindex="2"
+      data-field="username"
+      role="gridcell"
+      style="--width: 180px;"
+      tabindex="-1"
+    >
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-11iau0r-MuiTypography-root-MuiLink-root"
+        href="/users/1"
+      >
+        username
+      </a>
+    </div>
+    <div
+      aria-colindex="4"
+      aria-colspan="1"
+      class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
+      data-colindex="3"
+      data-field="name"
+      role="gridcell"
+      style="--width: 250px;"
+      tabindex="-1"
+      title="User Name"
+    >
+      User Name
+    </div>
+    <div
+      aria-colindex="5"
+      aria-colspan="1"
+      class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
+      data-colindex="4"
+      data-field="email"
+      role="gridcell"
+      style="--width: 150px;"
+      tabindex="-1"
+      title="mail@mail.com"
+    >
+      mail@mail.com
+    </div>
+    <div
+      aria-colindex="6"
+      aria-colspan="1"
+      class="MuiDataGrid-cell--flex MuiDataGrid-cell MuiDataGrid-cell--textCenter"
+      data-colindex="5"
+      data-field="active"
+      role="gridcell"
+      style="--width: 100px;"
+      tabindex="-1"
+    >
+      <svg
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall MuiDataGrid-booleanCell css-ptiqhd-MuiSvgIcon-root"
+        data-testid="CheckIcon"
+        data-value="true"
+        focusable="false"
+        role="img"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+        />
+        <title>
+          yes
+        </title>
+      </svg>
+    </div>
+    <div
+      aria-colindex="7"
+      aria-colspan="1"
+      class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
+      data-colindex="6"
+      data-field="createdAt"
+      role="gridcell"
+      style="--width: 200px;"
+      tabindex="-1"
+      title="19/07/2024, 11:38:14"
+    >
+      19/07/2024, 11:38:14
+    </div>
+    <div
+      aria-colindex="8"
+      aria-colspan="1"
+      class="MuiDataGrid-cell--flex MuiDataGrid-cell MuiDataGrid-cell--textCenter"
+      data-colindex="7"
+      data-field="actions"
+      role="gridcell"
+      style="--width: 100px;"
+      tabindex="-1"
+    >
+      <div
+        class="MuiDataGrid-actionsCell"
+        role="menu"
+        tabindex="-1"
+      >
+        <a
+          aria-label="Users.Actions.UpdateUser"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+          data-mui-internal-clone-element="true"
+          href="/users/1/edit"
+          role="menuitem"
+          tabindex="-1"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="EditIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+        <button
+          aria-label="Users.Actions.DeleteUser"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+          data-mui-internal-clone-element="true"
+          role="menuitem"
+          tabindex="-1"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+            data-testid="DeleteIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>,
+  <div
+    aria-rowindex="3"
+    aria-selected="false"
+    class="MuiDataGrid-row MuiDataGrid-row--lastVisible"
+    data-id="12"
+    data-rowindex="1"
+    role="row"
+    style="max-height: 52px; min-height: 52px; --height: 52px;"
+  >
+    <div
+      class="MuiDataGrid-cellOffsetLeft"
+      role="presentation"
+      style="width: 0px;"
+    />
+    <div
+      aria-colindex="1"
+      aria-colspan="1"
+      class="MuiDataGrid-cellCheckbox MuiDataGrid-cell--flex MuiDataGrid-cell MuiDataGrid-cell--textCenter"
+      data-colindex="0"
+      data-field="__check__"
+      role="gridcell"
+      style="--width: 50px;"
+      tabindex="-1"
+    >
+      <span
+        class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiDataGrid-checkboxInput css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+      >
+        <input
+          aria-label="Select row"
+          class="PrivateSwitchBase-input css-1m9pwf3"
+          data-indeterminate="false"
+          tabindex="-1"
+          type="checkbox"
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="CheckBoxOutlineBlankIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </span>
+    </div>
+    <div
+      aria-colindex="2"
+      aria-colspan="1"
+      class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
+      data-colindex="1"
+      data-field="id"
+      role="gridcell"
+      style="--width: 100px;"
+      tabindex="-1"
+      title="12"
+    >
+      12
+    </div>
+    <div
+      aria-colindex="3"
+      aria-colspan="1"
+      class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
+      data-colindex="2"
+      data-field="username"
+      role="gridcell"
+      style="--width: 180px;"
+      tabindex="-1"
+    >
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-11iau0r-MuiTypography-root-MuiLink-root"
+        href="/users/12"
+      >
+        username
+      </a>
+    </div>
+    <div
+      aria-colindex="4"
+      aria-colspan="1"
+      class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
+      data-colindex="3"
+      data-field="name"
+      role="gridcell"
+      style="--width: 250px;"
+      tabindex="-1"
+      title="User Name"
+    >
+      User Name
+    </div>
+    <div
+      aria-colindex="5"
+      aria-colspan="1"
+      class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
+      data-colindex="4"
+      data-field="email"
+      role="gridcell"
+      style="--width: 150px;"
+      tabindex="-1"
+      title="mail@mail.com"
+    >
+      mail@mail.com
+    </div>
+    <div
+      aria-colindex="6"
+      aria-colspan="1"
+      class="MuiDataGrid-cell--flex MuiDataGrid-cell MuiDataGrid-cell--textCenter"
+      data-colindex="5"
+      data-field="active"
+      role="gridcell"
+      style="--width: 100px;"
+      tabindex="-1"
+    >
+      <svg
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall MuiDataGrid-booleanCell css-ptiqhd-MuiSvgIcon-root"
+        data-testid="CheckIcon"
+        data-value="true"
+        focusable="false"
+        role="img"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+        />
+        <title>
+          yes
+        </title>
+      </svg>
+    </div>
+    <div
+      aria-colindex="7"
+      aria-colspan="1"
+      class="MuiDataGrid-cell MuiDataGrid-cell--textLeft"
+      data-colindex="6"
+      data-field="createdAt"
+      role="gridcell"
+      style="--width: 200px;"
+      tabindex="-1"
+      title="19/07/2024, 11:38:14"
+    >
+      19/07/2024, 11:38:14
+    </div>
+    <div
+      aria-colindex="8"
+      aria-colspan="1"
+      class="MuiDataGrid-cell--flex MuiDataGrid-cell MuiDataGrid-cell--textCenter"
+      data-colindex="7"
+      data-field="actions"
+      role="gridcell"
+      style="--width: 100px;"
+      tabindex="-1"
+    >
+      <div
+        class="MuiDataGrid-actionsCell"
+        role="menu"
+        tabindex="-1"
+      >
+        <a
+          aria-label="Users.Actions.UpdateUser"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+          data-mui-internal-clone-element="true"
+          href="/users/12/edit"
+          role="menuitem"
+          tabindex="-1"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="EditIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+        <button
+          aria-label="Users.Actions.DeleteUser"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+          data-mui-internal-clone-element="true"
+          role="menuitem"
+          tabindex="-1"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+            data-testid="DeleteIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>,
+]
+`;

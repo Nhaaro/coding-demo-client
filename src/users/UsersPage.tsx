@@ -19,7 +19,7 @@ import {
   GridRowSelectionModel,
   GridRowsProp,
 } from '@mui/x-data-grid'
-import React, { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { UserContext } from './UserContext'
@@ -77,9 +77,10 @@ const UsersPage = () => {
       getActions: (params: GridRowParams) => [
         <Tooltip title={t('Users.Actions.UpdateUser')}>
           <IconButton
-            aria-label="edit"
+            aria-label={t('Users.Actions.UpdateUser')}
             component={Link}
             to={`/users/${params.id}/edit`}
+            role="menuitem"
           >
             <EditIcon />
           </IconButton>
@@ -96,7 +97,7 @@ const UsersPage = () => {
   const rows: GridRowsProp = users?.users || []
 
   const [rowSelectionModel, setRowsSelectectionModel] =
-    React.useState<GridRowSelectionModel>([])
+    useState<GridRowSelectionModel>([])
 
   return (
     <>
