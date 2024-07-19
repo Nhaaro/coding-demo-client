@@ -59,7 +59,7 @@ const UserDetails = () => {
             component={RouterLink}
             to={`/users/${userId}/edit`}
           >
-            {t('Users.Actions.EditUser')}
+            {t('Users.Actions.UpdateUser')}
           </Button>
         </Stack>
       </Toolbar>

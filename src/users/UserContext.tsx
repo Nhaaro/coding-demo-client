@@ -8,6 +8,7 @@ interface User {
   lastName: string
   email: string
   createdAt: Date
+  password: string
 }
 
 interface UserContextProps {
@@ -47,6 +48,7 @@ const data = [
     lastName: 'Name',
     email: 'mail@mail.com',
     createdAt: new Date(Date.now()),
+    password: '',
   },
   {
     id: 12,
@@ -56,5 +58,6 @@ const data = [
     lastName: 'Name',
     email: 'mail@mail.com',
     createdAt: new Date(Date.now()),
+    password: '',
   },
 ]

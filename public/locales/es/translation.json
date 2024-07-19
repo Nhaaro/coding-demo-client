@@ -13,24 +13,23 @@
     "SelectLanguage": "Idioma"
   },
   "Users": {
-    "Table": {
-      "Headers": {
-        "ID": "ID",
-        "Username": "Nombre de usuario",
-        "Status": "Estatus",
-        "DisplayName": "Nombre de visualización",
-        "FirstName": "Nombre(s)",
-        "LastName": "Apellido",
-        "Email": "Email",
-        "CreatedAt": "Creado en",
-        "Actions": "Actiones"
-      }
+    "Attributes": {
+      "ID": "ID",
+      "Username": "Nombre de usuario",
+      "Status": "Estatus",
+      "DisplayName": "Nombre de visualización",
+      "FirstName": "Nombre(s)",
+      "LastName": "Apellido",
+      "Email": "Email",
+      "CreatedAt": "Creado en",
+      "Password": "Contrasena"
     },
     "Actions": {
       "CreateUser": "Nuevo Usuario",
       "ReadUser": "Ver",
-      "EditUser": "Editar",
-      "DeleteUser": "Borrar"
+      "UpdateUser": "Editar",
+      "DeleteUser": "Borrar",
+      "DeleteUserBulk": "Borrar usuarios"
     },
     "Details": {
       "AccountDetails": "Detalles de Cuenta",

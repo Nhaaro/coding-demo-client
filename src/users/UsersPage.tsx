@@ -30,10 +30,10 @@ const UsersPage = () => {
   const users = useContext(UserContext)
 
   const columns: GridColDef[] = [
-    { field: 'id', headerName: t('Users.Table.Headers.ID') },
+    { field: 'id', headerName: t('Users.Attributes.ID') },
     {
       field: 'username',
-      headerName: t('Users.Table.Headers.Username'),
+      headerName: t('Users.Attributes.Username'),
       minWidth: 180,
       renderCell(params) {
         return (
@@ -49,7 +49,7 @@ const UsersPage = () => {
     },
     {
       field: 'name',
-      headerName: t('Users.Table.Headers.DisplayName'),
+      headerName: t('Users.Attributes.DisplayName'),
       valueGetter: (_, row) => {
         return `${row.firstName || ''} ${row.lastName || ''}`
       },
@@ -57,26 +57,25 @@ const UsersPage = () => {
     },
     {
       field: 'email',
-      headerName: t('Users.Table.Headers.Email'),
+      headerName: t('Users.Attributes.Email'),
       minWidth: 150,
     },
     {
       field: 'active',
-      headerName: t('Users.Table.Headers.Status'),
+      headerName: t('Users.Attributes.Status'),
       type: 'boolean',
     },
     {
       field: 'createdAt',
-      headerName: t('Users.Table.Headers.CreatedAt'),
+      headerName: t('Users.Attributes.CreatedAt'),
       type: 'dateTime',
       width: 200,
     },
     {
       field: 'actions',
       type: 'actions',
-      headerName: t('Users.Table.Headers.Actions'),
       getActions: (params: GridRowParams) => [
-        <Tooltip title={t('Users.Actions.EditUser')}>
+        <Tooltip title={t('Users.Actions.UpdateUser')}>
           <IconButton
             aria-label="edit"
             component={Link}
