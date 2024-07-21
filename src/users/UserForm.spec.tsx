@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import {
   createMemoryRouter,
   MemoryRouter,
@@ -8,7 +8,34 @@ import UserProvider from './UserContext.tsx'
 import UserForm from './UserForm'
 import userEvent from '@testing-library/user-event'
 
+const testUsers = [
+  {
+    id: 1,
+    username: 'username',
+    active: true,
+    firstName: 'User',
+    lastName: 'Name',
+    email: 'mail@mail.com',
+    createdAt: '2024-07-16T11:38:14.000Z',
+    password: '#m4Ng7UkH6y!^@e',
+  },
+  {
+    id: 12,
+    username: 'otheruser',
+    active: true,
+    firstName: 'Another',
+    lastName: 'User',
+    email: 'other@mail.com',
+    createdAt: '2024-07-19T09:55:22.000Z',
+    password: 'so^T4QsFXBz6U3G',
+  },
+]
+
 describe('UserForm', () => {
+  beforeEach(() => {
+    fetchMock.mockResponse(JSON.stringify(testUsers))
+  })
+
   describe('initial data', () => {
     test('loads create user with empty values', async () => {
       let router = createMemoryRouter(
@@ -27,11 +54,13 @@ describe('UserForm', () => {
         }
       )
 
-      render(
-        <UserProvider>
-          <RouterProvider router={router} />
-        </UserProvider>
-      )
+      await waitFor(() => {
+        render(
+          <UserProvider>
+            <RouterProvider router={router} />
+          </UserProvider>
+        )
+      })
 
       const inputs = screen.getAllByRole('textbox')
       for (const input of inputs) {
@@ -39,48 +68,51 @@ describe('UserForm', () => {
       }
     })
 
-    test.each([
-      {
-        id: 1,
-        username: 'username',
-        firstName: 'User',
-        lastName: 'Name',
-        email: 'mail@mail.com',
-      },
-      {
-        id: 12,
-        username: 'otheruser',
-        firstName: 'Another',
-        lastName: 'User',
-        email: 'other@mail.com',
-      },
-    ])('loads user with correct values', async ({ id, ...formValues }) => {
-      let router = createMemoryRouter(
-        [
+    test.each(testUsers)(
+      'loads user with correct values - $id',
+      async ({ id, ...formValues }) => {
+        let router = createMemoryRouter(
+          [
+            {
+              path: 'users/create',
+              element: <UserForm />,
+            },
+            {
+              path: 'users/:userId/edit',
+              element: <UserForm />,
+            },
+          ],
           {
-            path: 'users/create',
-            element: <UserForm />,
-          },
-          {
-            path: 'users/:userId/edit',
-            element: <UserForm />,
-          },
-        ],
-        {
-          initialEntries: [`/users/${id}/edit`],
-        }
-      )
+            initialEntries: [`/users/${id}/edit`],
+          }
+        )
 
-      render(
-        <UserProvider>
-          <RouterProvider router={router} />
-        </UserProvider>
-      )
+        await waitFor(() => {
+          render(
+            <UserProvider>
+              <RouterProvider router={router} />
+            </UserProvider>
+          )
+        })
 
-      const form = screen.getByRole('form')
-      expect(form).toHaveFormValues(formValues)
-      expect(screen.getByLabelText('Users.Attributes.Password')).toHaveValue('')
-    })
+        await waitFor(() => {}) // fetch users in UserContext
+        await waitFor(() => {}) // populate form
+
+        const formFields = ['usersame', 'firstName', 'lastName', 'email']
+
+        const form = screen.getByRole('form')
+        expect(form).toHaveFormValues(
+          Object.fromEntries(
+            Object.entries(formValues).filter(([key]) =>
+              formFields.includes(key)
+            )
+          )
+        )
+        expect(screen.getByLabelText('Users.Attributes.Password')).toHaveValue(
+          ''
+        )
+      }
+    )
   })
 
   test('inputs can be modified', async () => {

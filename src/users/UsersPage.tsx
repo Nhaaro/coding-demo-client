@@ -70,6 +70,7 @@ const UsersPage = () => {
       headerName: t('Users.Attributes.CreatedAt'),
       type: 'dateTime',
       width: 200,
+      valueGetter: (_, row) => new Date(row.createdAt),
     },
     {
       field: 'actions',

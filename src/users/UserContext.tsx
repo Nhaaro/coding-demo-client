@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 export interface User {
   id: number
@@ -7,7 +7,7 @@ export interface User {
   firstName: string
   lastName: string
   email: string
-  createdAt: Date
+  createdAt: string
   password: string
 }
 
@@ -23,7 +23,15 @@ export const UserContext = createContext<UserContextProps | undefined>(
 )
 
 const UserProvider = ({ children }: { children: React.ReactNode }) => {
-  const [users, setUsers] = useState<User[]>(data)
+  const [users, setUsers] = useState<User[]>([])
+
+  const fetchUsers = async () => {
+    const data = await fetch('/data/users.json')
+    setUsers(await data.json())
+  }
+  useEffect(() => {
+    fetchUsers()
+  }, [])
 
   const addUser = (user: User) => setUsers([...users, user])
   const changeUser = (user: User) =>
@@ -38,26 +46,3 @@ const UserProvider = ({ children }: { children: React.ReactNode }) => {
 }
 
 export default UserProvider
-
-const data = [
-  {
-    id: 1,
-    username: 'username',
-    active: true,
-    firstName: 'User',
-    lastName: 'Name',
-    email: 'mail@mail.com',
-    createdAt: new Date(Date.now()),
-    password: '',
-  },
-  {
-    id: 12,
-    username: 'username',
-    active: true,
-    firstName: 'User',
-    lastName: 'Name',
-    email: 'mail@mail.com',
-    createdAt: new Date(Date.now()),
-    password: '',
-  },
-]

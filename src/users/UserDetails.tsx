@@ -124,7 +124,7 @@ const UserDetails = () => {
                     </Typography>
                     <Typography>
                       <strong>{t('Users.Details.CreatedAt')}</strong>
-                      {user.createdAt.toLocaleDateString()}
+                      {new Date(user.createdAt).toLocaleDateString()}
                     </Typography>
                   </Box>
                 </Box>

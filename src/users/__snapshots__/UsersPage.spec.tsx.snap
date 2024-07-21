@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`UsersPage presentation it can render with not data 1`] = `
+<div
+  class="MuiDataGrid-virtualScrollerRenderZone css-s1v7zr-MuiDataGrid-virtualScrollerRenderZone"
+  role="rowgroup"
+  style="transform: translate3d(0, 0px, 0);"
+/>
+`;
+
 exports[`UsersPage presentation table starts with correct data 1`] = `
 [
   <div
@@ -143,9 +151,9 @@ exports[`UsersPage presentation table starts with correct data 1`] = `
       role="gridcell"
       style="--width: 200px;"
       tabindex="-1"
-      title="19/07/2024, 11:38:14"
+      title="16/07/2024, 05:38:14"
     >
-      19/07/2024, 11:38:14
+      16/07/2024, 05:38:14
     </div>
     <div
       aria-colindex="8"
@@ -288,7 +296,7 @@ exports[`UsersPage presentation table starts with correct data 1`] = `
         class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-11iau0r-MuiTypography-root-MuiLink-root"
         href="/users/12"
       >
-        username
+        otheruser
       </a>
     </div>
     <div
@@ -300,9 +308,9 @@ exports[`UsersPage presentation table starts with correct data 1`] = `
       role="gridcell"
       style="--width: 250px;"
       tabindex="-1"
-      title="User Name"
+      title="Another User"
     >
-      User Name
+      Another User
     </div>
     <div
       aria-colindex="5"
@@ -313,9 +321,9 @@ exports[`UsersPage presentation table starts with correct data 1`] = `
       role="gridcell"
       style="--width: 150px;"
       tabindex="-1"
-      title="mail@mail.com"
+      title="other@mail.com"
     >
-      mail@mail.com
+      other@mail.com
     </div>
     <div
       aria-colindex="6"
@@ -352,9 +360,9 @@ exports[`UsersPage presentation table starts with correct data 1`] = `
       role="gridcell"
       style="--width: 200px;"
       tabindex="-1"
-      title="19/07/2024, 11:38:14"
+      title="19/07/2024, 03:55:22"
     >
-      19/07/2024, 11:38:14
+      19/07/2024, 03:55:22
     </div>
     <div
       aria-colindex="8"

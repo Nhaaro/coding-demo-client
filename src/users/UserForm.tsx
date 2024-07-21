@@ -18,10 +18,18 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material'
-import React, { FormEvent, useContext, useState } from 'react'
+import React, { FormEvent, useContext, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link as RouterLink, useParams } from 'react-router-dom'
 import { User, UserContext } from './UserContext'
+
+const initialFormData = {
+  username: '',
+  firstName: '',
+  lastName: '',
+  email: '',
+  password: '',
+} as User
 
 const UserForm = () => {
   const { t } = useTranslation()
@@ -32,16 +40,15 @@ const UserForm = () => {
     (user) => user.id == parseInt(userId || '')
   )
 
-  const [formData, setFormData] = useState<User>({
-    ...(user ||
-      ({
-        username: '',
-        firstName: '',
-        lastName: '',
-        email: '',
-      } as User)),
-    password: '',
-  })
+  const [formData, setFormData] = useState<User>(initialFormData)
+  useEffect(() => {
+    setFormData({
+      ...initialFormData,
+      ...user,
+      password: '',
+    })
+  }, [user])
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [event.target.name]: event.target.value })
   }
