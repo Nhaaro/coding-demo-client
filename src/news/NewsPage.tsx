@@ -9,13 +9,15 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material'
+import { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-
-import NEWS from '../data/news.json'
+import { NewsContext } from './NewsContext'
 
 const NewsPage = () => {
   const { t } = useTranslation()
+
+  const newsContext = useContext(NewsContext)
 
   return (
     <>
@@ -32,7 +34,7 @@ const NewsPage = () => {
 
       <Container>
         <Grid container spacing={1} columns={{ xs: 4, sm: 8, md: 12 }}>
-          {NEWS.map((item, index) => {
+          {newsContext?.news.map((item, index) => {
             return (
               <Grid item key={item.id} xs={6} sm={4} md={4} height={150}>
                 <Card sx={{ height: '100%' }}>

@@ -9,11 +9,12 @@ import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import UsersPage from './users/UsersPage.tsx'
-import UserDetails from './users/UserDetails.tsx'
+import NewsProvider from './news/NewsContext.tsx'
 import NewsPage from './news/NewsPage.tsx'
 import UserProvider from './users/UserContext.tsx'
+import UserDetails from './users/UserDetails.tsx'
 import UserForm from './users/UserForm.tsx'
+import UsersPage from './users/UsersPage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -53,7 +54,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <UserProvider>
-      <RouterProvider router={router} />
+      <NewsProvider>
+        <RouterProvider router={router} />
+      </NewsProvider>
     </UserProvider>
   </React.StrictMode>
 )
