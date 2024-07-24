@@ -26,7 +26,7 @@ import { UserContext } from './UserContext'
 const UsersPage = () => {
   const { t } = useTranslation()
 
-  const users = useContext(UserContext)
+  const userContext = useContext(UserContext)
 
   const columns: GridColDef[] = [
     { field: 'id', headerName: t('Users.Attributes.ID') },
@@ -97,7 +97,7 @@ const UsersPage = () => {
       ],
     },
   ]
-  const rows: GridRowsProp = users?.users || []
+  const rows: GridRowsProp = userContext?.users || []
 
   const [rowSelectionModel, setRowsSelectectionModel] =
     useState<GridRowSelectionModel>([])
