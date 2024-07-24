@@ -1,30 +1,40 @@
-# React + TypeScript + Vite
+# Coding Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repo holds the client/front-end side of a coding demo SPA built with React + TypeScript, it was created with Vite's React + TypeScript template
 
-Currently, two official plugins are available:
+The following functionalities are currently implemented
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User Module (CRUD)
+  - View of all the users in the app (table)
+  - Single page for each user
+  - User form for user creation and modification
+  - User deletion
+- News Module
+  - Grid view of all the news articles
+  - Single page view for each article
 
-## Expanding the ESLint configuration
+This application currently supports the following languages
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- English
+- Spanish
 
-- Configure the top-level `parserOptions` property like this:
+## Libraries
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- `react-router-dom` - Navigation
+- `@mui/material` - UI Components
+- `i18next` - Internalization
+- `html-react-parser` - Parsing news article content
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## TODO
+
+- Connect with server/back-end
+  - User Module will include more fields stored in a SQL database (AWS RDS) accessible through a REST API
+  - News Module articles will be stored in a NoSQL database (AWS DynamoDB) accessible through a GraphQL endpoint
+- Add different users with different permission levels (admin, user, developer, etc.)
+- Handle password change and reset
+- Implement file uploading to allow users to change their profile picture
+- Add form validation with [joi](https://joi.dev/)
+- Create a branch that does not rely on Material UI components
+- Add HMR for the re-generation of `@types/resources.d.ts` everytime a new key is added to the localization files
+- Add e2e testing with Cypress
+- Add CI/CD GitHub Actions to deploy to an AWS s3 bucket
