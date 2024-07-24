@@ -1,16 +1,23 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Button, Container, Typography } from '@mui/material'
 import parse from 'html-react-parser'
 import { useContext } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link as RouterLink, useParams } from 'react-router-dom'
 import { NewsContext } from './NewsContext'
+import NotFound from '../components/NotFoundPage'
+import { useTranslation } from 'react-i18next'
 
 const NewsDetailPage = () => {
   const newsContext = useContext(NewsContext)
   const params = useParams()
   const article = newsContext?.getNewsArticle(params)
+  const { t } = useTranslation()
 
   return !article ? (
-    <></>
+    <NotFound text={t('Navigation.404.News.Text')}>
+      <Button variant="outlined" component={RouterLink} to="/news">
+        {t('Navigation.404.News.Return')}
+      </Button>
+    </NotFound>
   ) : (
     <Container maxWidth="md">
       <Box>

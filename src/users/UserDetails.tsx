@@ -14,6 +14,7 @@ import { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link as RouterLink, useParams } from 'react-router-dom'
 import { UserContext } from './UserContext'
+import NotFound from '../components/NotFoundPage'
 
 const UserDetails = () => {
   const { t } = useTranslation()
@@ -25,7 +26,9 @@ const UserDetails = () => {
   )
 
   return !user ? (
-    <div>no user</div>
+    <NotFound text={t('Navigation.404.Users.Text')}>
+      <Button variant="outlined" component={RouterLink} to="/users">{t('Navigation.404.Users.Return')}</Button>
+    </NotFound>
   ) : (
     <>
       <Toolbar>

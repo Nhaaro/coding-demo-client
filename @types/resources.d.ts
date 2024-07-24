@@ -3,7 +3,17 @@ interface Resources {
     "Navigation": {
       "404": {
         "NotFound": "Not Found",
-        "Text": "Oops, the page you are looking for seems to be missing, make sure the url is correct."
+        "Default": {
+          "Text": "Oops, the page you are looking for seems to be missing, make sure the url is correct."
+        },
+        "Users": {
+          "Text": "Oops, the user you are looking for seems to be missing, make sure the id is correct.",
+          "Return": "Go Back"
+        },
+        "News": {
+          "Text": "Oops, the article you are looking for seems to be missing, make sure the url is correct.",
+          "Return": "See articles"
+        }
       },
       "Tabs": {
         "Users": "Users",

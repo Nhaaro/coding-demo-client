@@ -10,7 +10,17 @@
     },
     "404": {
       "NotFound": "No se encontro",
-      "Text": "Parece que la pagina que buscas no se encuentra. Asegurate de que el URL sea correcto."
+      "Default": {
+        "Text": "Parece que la pagina que buscas no se encuentra. Asegurate de que el URL sea correcto."
+      },
+      "Users": {
+        "Text": "No se encontro el usuario. Asegurate que el id sea el correcto.",
+        "Return": "Regresar"
+      },
+      "News": {
+        "Text": "No encontramos el articulo. Asegurate que el URL sea correcto.",
+        "Return": "Ver noticias"
+      }
     }
   },
   "i18n": {
