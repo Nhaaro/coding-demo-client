@@ -40,7 +40,11 @@
       "AccountDetails": "Detalles de Cuenta",
       "ID": "ID: ",
       "Username": "Nombre de Usuario: ",
-      "Status": "Estatus: ",
+      "Status": {
+        "Label": "Estatus: ",
+        "Active": "Activo",
+        "Inactive": "Inactivo"
+      },
       "Email": "Email: ",
       "CreatedAt": "Fecha de Creacion: ",
       "PersonalDetails": "Detalles Personales",

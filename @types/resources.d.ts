@@ -41,7 +41,11 @@ interface Resources {
         "AccountDetails": "Account Details",
         "ID": "ID: ",
         "Username": "Username: ",
-        "Status": "Status: ",
+        "Status": {
+          "Label": "Status",
+          "Active": "Active",
+          "Inactive": "Inactive"
+        },
         "Email": "Email: ",
         "CreatedAt": "Created at: ",
         "PersonalDetails": "Personal Details",

@@ -113,8 +113,10 @@ const UserDetails = () => {
                       {user.id}
                     </Typography>
                     <Typography>
-                      <strong>{t('Users.Details.Status')}</strong>
-                      {user.active}
+                      <strong>{t('Users.Details.Status.Label')}</strong>
+                      {user.active
+                        ? t('Users.Details.Status.Active')
+                        : t('Users.Details.Status.Inactive')}
                     </Typography>
                   </Box>
                   <Box sx={{ flex: 1 }}>
