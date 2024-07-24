@@ -15,6 +15,7 @@ import UserProvider from './users/UserContext.tsx'
 import UserDetails from './users/UserDetails.tsx'
 import UserForm from './users/UserForm.tsx'
 import UsersPage from './users/UsersPage.tsx'
+import NewsDetailPage from './news/NewsDetailPage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -40,12 +41,10 @@ const router = createBrowserRouter([
       {
         path: 'news',
         element: <NewsPage />,
-        children: [
-          {
-            path: ':new',
-            element: <div>View New</div>,
-          },
-        ],
+      },
+      {
+        path: 'news/:year/:month/:day/:slug',
+        element: <NewsDetailPage />,
       },
     ],
   },

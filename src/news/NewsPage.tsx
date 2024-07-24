@@ -40,13 +40,13 @@ const NewsPage = () => {
                 <Card sx={{ height: '100%' }}>
                   <CardActionArea
                     component={Link}
-                    to={`/news/${item.title}`}
+                    to={`/news/${item.date.replace(/-/g, '/')}/${item.slug}`}
                     sx={{ display: 'flex', height: '100%' }}
                   >
                     <CardMedia
                       component="img"
                       sx={{ width: 151, flex: 0 }}
-                      image={`https://picsum.photos/id/${index + 10}/300/300`} // first few ids on picsum are very similar, skipping them
+                      image={item.thumbnail}
                       alt={item.title}
                     />
                     <Box sx={{ flex: 1 }}>
