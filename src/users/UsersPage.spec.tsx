@@ -311,6 +311,33 @@ describe('UsersPage', () => {
     test('update user', () => {})
 
     // TODO:
-    test('delete user', () => {})
+    test('delete user', async () => {
+      await waitFor(() => {
+        render(
+          <UserProvider>
+            <MemoryRouter>
+              <UsersPage />
+            </MemoryRouter>
+          </UserProvider>
+        )
+      })
+
+      await waitFor(() => {}) // fetch users in useContext
+      await waitFor(() => {
+        expect(
+          screen.getAllByRole('row', { name: /Select row/i })[0]
+        ).toBeInTheDocument()
+      })
+
+      const [firstRow] = screen.getAllByRole('row', { name: /Select row/i })
+      const deleteUserButton = getByRole(firstRow, 'menuitem', {
+        name: /Users.Actions.DeleteUser/i,
+      })
+      expect(deleteUserButton).toBeInTheDocument()
+
+      expect(firstRow).toBeInTheDocument()
+      await userEvent.click(deleteUserButton)
+      expect(firstRow).not.toBeInTheDocument()
+    })
   })
 })

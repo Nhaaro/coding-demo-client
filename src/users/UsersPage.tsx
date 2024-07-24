@@ -15,7 +15,6 @@ import {
   DataGrid,
   GridActionsCellItem,
   GridColDef,
-  GridRowParams,
   GridRowSelectionModel,
   GridRowsProp,
 } from '@mui/x-data-grid'
@@ -75,7 +74,7 @@ const UsersPage = () => {
     {
       field: 'actions',
       type: 'actions',
-      getActions: (params: GridRowParams) => [
+      getActions: (params) => [
         <Tooltip title={t('Users.Actions.UpdateUser')}>
           <IconButton
             aria-label={t('Users.Actions.UpdateUser')}
@@ -90,6 +89,9 @@ const UsersPage = () => {
           <GridActionsCellItem
             icon={<DeleteIcon />}
             label={t('Users.Actions.DeleteUser')}
+            onClick={() => {
+              userContext?.removeUser(parseInt(params.id as string))
+            }}
           />
         </Tooltip>,
       ],
