@@ -7,6 +7,10 @@
     "Actions": {
       "CreateUser": "Crear Usuario",
       "UpdateUser": "Editar detalles de usuario"
+    },
+    "404": {
+      "NotFound": "No se encontro",
+      "Text": "Parece que la pagina que buscas no se encuentra. Asegurate de que el URL sea correcto."
     }
   },
   "i18n": {

@@ -1,6 +1,10 @@
 interface Resources {
   "translation": {
     "Navigation": {
+      "404": {
+        "NotFound": "Not Found",
+        "Text": "Oops, the page you are looking for seems to be missing, make sure the url is correct."
+      },
       "Tabs": {
         "Users": "Users",
         "News": "News"

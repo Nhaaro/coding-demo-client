@@ -7,6 +7,10 @@
     "Actions": {
       "CreateUser": "Create User",
       "UpdateUser": "Edit user details"
+    },
+    "404": {
+      "NotFound": "Not Found",
+      "Text": "Oops, the page you are looking for seems to be missing, make sure the url is correct."
     }
   },
   "i18n": {

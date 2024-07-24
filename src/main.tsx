@@ -16,6 +16,7 @@ import UserDetails from './users/UserDetails.tsx'
 import UserForm from './users/UserForm.tsx'
 import UsersPage from './users/UsersPage.tsx'
 import NewsDetailPage from './news/NewsDetailPage.tsx'
+import NotFound from './components/NotFoundPage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: 'news/:year/:month/:day/:slug',
         element: <NewsDetailPage />,
+      },
+      {
+        path: '*',
+        element: <NotFound />,
       },
     ],
   },
