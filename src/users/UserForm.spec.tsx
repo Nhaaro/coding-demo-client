@@ -98,7 +98,7 @@ describe('UserForm', () => {
         await waitFor(() => {}) // fetch users in UserContext
         await waitFor(() => {}) // populate form
 
-        const formFields = ['usersame', 'firstName', 'lastName', 'email']
+        const formFields = ['username', 'firstName', 'lastName', 'email']
 
         const form = screen.getByRole('form')
         expect(form).toHaveFormValues(
