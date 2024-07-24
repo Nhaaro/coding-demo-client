@@ -34,6 +34,8 @@ npm install
 npm run dev
 ```
 
+Make sure you have node v22.x.x and npm v10.x.x installed
+
 ## TODO
 
 - Connect with server/back-end
