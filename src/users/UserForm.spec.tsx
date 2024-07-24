@@ -17,7 +17,6 @@ const testUsers = [
     lastName: 'Name',
     email: 'mail@mail.com',
     createdAt: '2024-07-16T11:38:14.000Z',
-    password: '#m4Ng7UkH6y!^@e',
   },
   {
     id: 12,
@@ -27,7 +26,6 @@ const testUsers = [
     lastName: 'User',
     email: 'other@mail.com',
     createdAt: '2024-07-19T09:55:22.000Z',
-    password: 'so^T4QsFXBz6U3G',
   },
 ]
 
@@ -107,9 +105,6 @@ describe('UserForm', () => {
               formFields.includes(key)
             )
           )
-        )
-        expect(screen.getByLabelText('Users.Attributes.Password')).toHaveValue(
-          ''
         )
       }
     )

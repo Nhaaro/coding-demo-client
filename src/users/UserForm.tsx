@@ -1,18 +1,11 @@
 import SaveIcon from '@mui/icons-material/Save'
-import Visibility from '@mui/icons-material/Visibility'
-import VisibilityOff from '@mui/icons-material/VisibilityOff'
 import {
   Box,
   Breadcrumbs,
   Button,
   Card,
   CardContent,
-  FormControl,
-  IconButton,
-  InputAdornment,
-  InputLabel,
   Link,
-  OutlinedInput,
   Stack,
   TextField,
   Toolbar,
@@ -28,7 +21,6 @@ const initialFormData = {
   firstName: '',
   lastName: '',
   email: '',
-  password: '',
 } as User
 
 const UserForm = () => {
@@ -45,7 +37,6 @@ const UserForm = () => {
     setFormData({
       ...initialFormData,
       ...user,
-      password: '',
     })
   }, [user])
 
@@ -55,9 +46,6 @@ const UserForm = () => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
   }
-
-  const [showPassword, setShowPassword] = useState(false)
-  const handleClickShowPassword = () => setShowPassword((show) => !show)
 
   return (
     <form onSubmit={handleSubmit} role="form">
@@ -154,29 +142,6 @@ const UserForm = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                 />
-                <FormControl variant="outlined" fullWidth>
-                  <InputLabel htmlFor="outlined-adornment-password">
-                    {t('Users.Attributes.Password')}
-                  </InputLabel>
-                  <OutlinedInput
-                    id="outlined-adornment-password"
-                    type={showPassword ? 'text' : 'password'}
-                    endAdornment={
-                      <InputAdornment position="end">
-                        <IconButton
-                          aria-label="toggle password visibility"
-                          onClick={handleClickShowPassword}
-                          edge="end"
-                        >
-                          {showPassword ? <VisibilityOff /> : <Visibility />}
-                        </IconButton>
-                      </InputAdornment>
-                    }
-                    label={t('Users.Attributes.Password')}
-                    value={formData.password}
-                    onChange={handleInputChange}
-                  />
-                </FormControl>
               </Stack>
             </Stack>
           </CardContent>

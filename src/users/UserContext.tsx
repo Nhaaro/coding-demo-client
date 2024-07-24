@@ -8,7 +8,6 @@ export interface User {
   lastName: string
   email: string
   createdAt: string
-  password: string
 }
 
 interface UserContextProps {

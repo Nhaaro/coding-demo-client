@@ -26,8 +26,7 @@ interface Resources {
         "FirstName": "First name",
         "LastName": "Last name",
         "Email": "Email",
-        "CreatedAt": "Created at",
-        "Password": "Password"
+        "CreatedAt": "Created at"
       },
       "Actions": {
         "CreateUser": "New User",
