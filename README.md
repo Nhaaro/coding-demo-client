@@ -25,6 +25,15 @@ This application currently supports the following languages
 - `i18next` - Internalization
 - `html-react-parser` - Parsing news article content
 
+## How to run
+
+As this is a Vite project, all you need to do is run
+
+```bash
+npm install
+npm run dev
+```
+
 ## TODO
 
 - Connect with server/back-end
