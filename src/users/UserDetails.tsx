@@ -78,6 +78,7 @@ const UserDetails = () => {
               }}
             >
               <img
+                // NOTE: this will be replace with actual image urls in the user object `user.avatar`
                 src={`https://i.pravatar.cc/150?img=${userId}`}
                 alt={`https://i.pravatar.cc/150?img=${userId}`}
               />
