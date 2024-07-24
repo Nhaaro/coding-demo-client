@@ -26,7 +26,7 @@
   "i18n": {
     "Languages": {
       "English": "Ingles",
-      "Spanish": "Espa~ol"
+      "Spanish": "Español"
     },
     "SelectLanguage": "Idioma"
   },
@@ -60,7 +60,7 @@
         "Inactive": "Inactivo"
       },
       "Email": "Email: ",
-      "CreatedAt": "Fecha de Creacion: ",
+      "CreatedAt": "Fecha de Creación: ",
       "PersonalDetails": "Detalles Personales",
       "FirstName": "Nombre(s): ",
       "LastName": "Apellido: "
