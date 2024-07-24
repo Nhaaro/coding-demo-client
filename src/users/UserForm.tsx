@@ -16,12 +16,16 @@ import { useTranslation } from 'react-i18next'
 import { Link as RouterLink, useParams } from 'react-router-dom'
 import { User, UserContext } from './UserContext'
 
-const initialFormData = {
+export type UserFormData = Pick<
+  User,
+  'username' | 'firstName' | 'lastName' | 'email'
+>
+const initialFormData: UserFormData = {
   username: '',
   firstName: '',
   lastName: '',
   email: '',
-} as User
+}
 
 const UserForm = () => {
   const { t } = useTranslation()
@@ -32,7 +36,7 @@ const UserForm = () => {
     (user) => user.id == parseInt(userId || '')
   )
 
-  const [formData, setFormData] = useState<User>(initialFormData)
+  const [formData, setFormData] = useState<UserFormData>(initialFormData)
   useEffect(() => {
     setFormData({
       ...initialFormData,
@@ -45,6 +49,9 @@ const UserForm = () => {
   }
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    user
+      ? userContext?.changeUser({ ...formData, id: user.id })
+      : userContext?.addUser(formData)
   }
 
   return (
@@ -131,6 +138,7 @@ const UserForm = () => {
                   value={formData.username}
                   onChange={handleInputChange}
                   disabled={!!user}
+                  required
                 />
               </Stack>
               <Stack spacing={1} sx={{ flex: 1 }}>
@@ -141,6 +149,7 @@ const UserForm = () => {
                   label={t('Users.Attributes.Email')}
                   value={formData.email}
                   onChange={handleInputChange}
+                  required
                 />
               </Stack>
             </Stack>

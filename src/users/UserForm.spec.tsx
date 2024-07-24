@@ -4,11 +4,11 @@ import {
   MemoryRouter,
   RouterProvider,
 } from 'react-router-dom'
-import UserProvider from './UserContext.tsx'
+import UserProvider, { User } from './UserContext.tsx'
 import UserForm from './UserForm'
 import userEvent from '@testing-library/user-event'
 
-const testUsers = [
+const testUsers: User[] = [
   {
     id: 1,
     username: 'username',
@@ -17,6 +17,7 @@ const testUsers = [
     lastName: 'Name',
     email: 'mail@mail.com',
     createdAt: '2024-07-16T11:38:14.000Z',
+    updatedAt: '2024-07-16T11:38:14.000Z',
   },
   {
     id: 12,
@@ -26,6 +27,7 @@ const testUsers = [
     lastName: 'User',
     email: 'other@mail.com',
     createdAt: '2024-07-19T09:55:22.000Z',
+    updatedAt: '2024-07-19T09:55:22.000Z',
   },
 ]
 
